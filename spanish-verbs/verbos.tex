@@ -1,0 +1,270 @@
+\documentclass[a4paper,11pt]{ctexart}
+\usepackage[margin=1.9cm,top=2.1cm,bottom=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[colorlinks=true,linkcolor=blue!50!black]{hyperref}
+
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\definecolor{accent}{HTML}{B23A48}
+\definecolor{ink}{HTML}{22313F}
+\definecolor{pale}{HTML}{F4EFE6}
+\definecolor{palegray}{HTML}{ECEFF3}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ink}, name={,}, number=\chinese{section}、, aftername=\quad},
+  subsection={format=\large\bfseries\color{accent}},
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.28}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{gray} 西班牙语动词变位小结}
+\fancyhead[R]{\small\color{gray} 陈述式现在时}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+% 不规则 / 变化部分用红色粗体标出
+\newcommand{\ir}[1]{\textbf{\textcolor{accent}{#1}}}
+\newcommand{\es}[1]{\textit{#1}}
+
+% 变位表: \conj{不定式}{释义}{yo}{tú}{él}{nosotros}{vosotros}{ellos}
+\newcommand{\conj}[8]{\textbf{#1} & {\small #2} & #3 & #4 & #5 & #6 & #7 & #8 \\}
+\newenvironment{conjtable}{%
+  \par\small\setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}p{1.6cm}%
+    >{\raggedright\arraybackslash}p{1.75cm}>{\raggedright\arraybackslash}p{1.75cm}>{\raggedright\arraybackslash}p{1.95cm}%
+    >{\raggedright\arraybackslash}p{2.15cm}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}p{2.1cm}@{}}
+  \toprule
+  \textbf{不定式} & \textbf{词义} & \textbf{yo} & \textbf{tú} & \textbf{él/ella/\newline usted} & \textbf{nosotros/as} & \textbf{vosotros/as} & \textbf{ellos/ellas/\newline ustedes} \\
+  \midrule
+}{%
+  \bottomrule\end{tabular}\par\normalsize
+}
+
+\newtcolorbox{rulebox}[1][]{enhanced,colback=pale,colframe=accent!70,boxrule=0.5pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,arc=2pt,breakable,#1}
+\newtcolorbox{tip}[1][]{enhanced,colback=palegray,colframe=ink!60,boxrule=0.5pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,arc=2pt,breakable,#1}
+
+\title{\textbf{西班牙语动词变位小结}\\[2pt]\large 基于笔记与教材 Vocabulario / Resumen 1 整理}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\section{变位基础}
+
+西班牙语动词 = \textbf{词根} + \textbf{词尾}，词尾随\textbf{式、时态、人称}变化。动词原形（不定式）按词尾分为三类，称为\textbf{三种变位}：
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+ & 第一变位 & 第二变位 & 第三变位 \\
+\midrule
+词尾 & \es{-ar} & \es{-er} & \es{-ir} \\
+例词 & \es{estudiar, cantar, cocinar} & \es{leer, tener, ser} & \es{escribir, ir, vivir} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+本文只讲\textbf{陈述式现在时}，涉及六个人称：
+
+\begin{center}
+\small
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+人称 & 我 & 你 & 他/她/您 & 我们 & 你们（西班牙） & 他们/她们/您们 \\
+\midrule
+代词 & \es{yo} & \es{tú} & \es{él / ella / usted} & \es{nosotros/as} & \es{vosotros/as} & \es{ellos / ellas / ustedes} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tip}
+\textbf{要点：}(1) 动词与主语的人称、数一致；(2) 因为词尾已经表明人称，主语代词通常\textbf{省略}（\es{Estudio español.}）；(3) \es{usted}／\es{ustedes} 是敬称，但动词用\textbf{第三人称}变位；(4) 以下表格中\ir{红色粗体}表示\textbf{不规则／发生变化}的部分。
+\end{tip}
+
+\section{规则变位}
+
+\subsection{词尾表}
+
+去掉 \es{-ar / -er / -ir}，得到\textbf{词根}，再加下列词尾：
+
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+ & yo & tú & él/ella/usted & nosotros/as & vosotros/as & ellos/ellas/ustedes \\
+\midrule
+\textbf{-ar} & \es{-o} & \es{-as} & \es{-a} & \es{-amos} & \es{-áis} & \es{-an} \\
+\textbf{-er} & \es{-o} & \es{-es} & \es{-e} & \es{-emos} & \es{-éis} & \es{-en} \\
+\textbf{-ir} & \es{-o} & \es{-es} & \es{-e} & \es{-imos} & \es{-ís} & \es{-en} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{rulebox}
+\textbf{规律速记}
+\begin{itemize}[leftmargin=1.3em,itemsep=1pt,topsep=2pt]
+  \item \textbf{yo} 三类都是 \es{-o}。
+  \item \textbf{-er 与 -ir 几乎相同}，只有 \textbf{nosotros}（\es{-emos} / \es{-imos}）和 \textbf{vosotros}（\es{-éis} / \es{-ís}）两格不同。
+  \item \textbf{-ar} 类的元音是 \es{a}，\textbf{-er} 类是 \es{e}；\es{-ar} 的 tú/él/ellos 形式（\es{-as, -a, -an}）与 \es{-er} 类（\es{-es, -e, -en}）元音正好互换。
+  \item \textbf{重音}：\es{vosotros} 形式带重音符号 \es{á / é / í}（\es{-áis, -éis, -ís}）；\es{leer} 的 \es{leéis} 也是如此，词根 \es{e} 与词尾 \es{é} 分读为两个音节。
+\end{itemize}
+\end{rulebox}
+
+\subsection{第一变位 \es{-ar}}
+
+\begin{conjtable}
+\conj{estudiar}{学习}{estudio}{estudias}{estudia}{estudiamos}{estudiáis}{estudian}
+\conj{cantar}{唱歌}{canto}{cantas}{canta}{cantamos}{cantáis}{cantan}
+\conj{cocinar}{烹饪}{cocino}{cocinas}{cocina}{cocinamos}{cocináis}{cocinan}
+\conj{hablar}{说话}{hablo}{hablas}{habla}{hablamos}{habláis}{hablan}
+\conj{trabajar}{工作}{trabajo}{trabajas}{trabaja}{trabajamos}{trabajáis}{trabajan}
+\conj{llamar}{称呼；打电话}{llamo}{llamas}{llama}{llamamos}{llamáis}{llaman}
+\conj{significar}{意思是}{significo}{significas}{significa}{significamos}{significáis}{significan}
+\end{conjtable}
+
+\subsection{第二变位 \es{-er}}
+
+\begin{conjtable}
+\conj{leer}{读}{leo}{lees}{lee}{leemos}{leéis}{leen}
+\end{conjtable}
+
+\subsection{第三变位 \es{-ir}}
+
+\begin{conjtable}
+\conj{escribir}{写}{escribo}{escribes}{escribe}{escribimos}{escribís}{escriben}
+\conj{vivir}{居住；生活}{vivo}{vives}{vive}{vivimos}{vivís}{viven}
+\end{conjtable}
+
+\begin{tip}
+\textbf{国籍／职业词的联想（同页笔记）：}\es{alemán / alemana}（德国人）— \es{Alemania}（德国），\es{francés / francesa}（法国人／法语）— \es{Francia}，\es{italiano / italiana}（意大利人）— \es{Italia}。表示国籍、职业的名词与形容词要与主语\textbf{性、数一致}：\es{Soy alemán.}（男）／\es{Soy alemana.}（女）。
+\end{tip}
+
+\section{自反动词（代词式动词）}
+
+原形以 \es{-se} 结尾，如 \es{llamarse}，表示\textbf{动作的发出者同时也是承受者}。变位时：\textbf{自反代词}随人称变化，放在变位动词\textbf{之前}，动词本身按 \es{-ar} 规则变位。
+
+\begin{center}
+\small
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+自反代词 & \es{me} & \es{te} & \es{se} & \es{nos} & \es{os} & \es{se} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{conjtable}
+\conj{llamarse}{名叫}{me llamo}{te llamas}{se llama}{nos llamamos}{os llamáis}{se llaman}
+\conj{levantarse}{起床}{me levanto}{te levantas}{se levanta}{nos levantamos}{os levantáis}{se levantan}
+\conj{bañarse}{洗澡}{me baño}{te bañas}{se baña}{nos bañamos}{os bañáis}{se bañan}
+\conj{dedicarse (a)}{从事；投身于}{me dedico}{te dedicas}{se dedica}{nos dedicamos}{os dedicáis}{se dedican}
+\end{conjtable}
+
+\begin{tip}
+\textbf{常用句：}\es{Me llamo Daniel.}（我叫丹尼尔。）\quad\es{¿Cómo te llamas?}（你叫什么名字？）\quad\es{¿A qué te dedicas?}（你从事什么工作？）\quad\es{Me dedico a la enseñanza.}（我从事教学工作。）\\
+\es{dedicarse a} + 名词／动词原形。\es{llamar} 是及物动词“称呼”，加 \es{-se} 才是“名叫”。\\
+\textbf{无人称/被动用法：}\es{¿Cómo se escribe\ldots?}（怎么写？）\quad\es{¿Cómo se dice\ldots en español?}（用西班牙语怎么说？）\ 这里的 \es{se} 与动词第三人称连用。
+\end{tip}
+
+\section{词根元音变化动词}
+
+有些动词在\textbf{重读词根}的元音上发生变化，形成“靴子”形：\textbf{yo, tú, él, ellos 变，nosotros 和 vosotros 不变}（这两格重音落在词尾，词根元音不重读）。词尾仍按三类规则变位。
+
+\begin{center}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+变化类型 & 适用 & 例词（本页词汇） & 变化 \\
+\midrule
+\es{o $\to$ ue} & -er / -ar / -ir & \es{poder} 能 & \es{pod-} $\to$ \ir{pued}- \\
+\es{e $\to$ ie} & -er / -ir & \es{sentir} 感到、抱歉；\es{tener} 有 & \es{sent-} $\to$ \ir{sient}- \\
+\es{e $\to$ i}  & 仅 -ir & \es{repetir} 重复；\es{decir} 说 & \es{repet-} $\to$ \ir{repit}- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{conjtable}
+\conj{poder}{能够}{\ir{puedo}}{\ir{puedes}}{\ir{puede}}{podemos}{podéis}{\ir{pueden}}
+\conj{sentir}{感到；遗憾}{\ir{siento}}{\ir{sientes}}{\ir{siente}}{sentimos}{sentís}{\ir{sienten}}
+\conj{repetir}{重复}{\ir{repito}}{\ir{repites}}{\ir{repite}}{repetimos}{repetís}{\ir{repiten}}
+\end{conjtable}
+
+\es{Lo siento.}（我很遗憾／对不起）中的 \es{siento} 就是 \es{sentir} 的 yo 形式。\es{decir} 既有 \es{e $\to$ i}，yo 形式还不规则，放在下一节。
+
+\section{不规则动词}
+
+以下动词的变位不能完全靠规则推出，需要\textbf{整体记忆}。其中 \es{ser, tener, ir} 在笔记中出现，\es{estar, decir} 来自词汇表与课文问候语（\es{¿Cómo estás?}、\es{¿Cómo se dice\ldots?}）。
+
+\begin{conjtable}
+\conj{ser}{是}{\ir{soy}}{\ir{eres}}{\ir{es}}{\ir{somos}}{\ir{sois}}{\ir{son}}
+\conj{tener}{有}{\ir{tengo}}{\ir{tienes}}{\ir{tiene}}{tenemos}{tenéis}{\ir{tienen}}
+\conj{ir}{去}{\ir{voy}}{\ir{vas}}{\ir{va}}{\ir{vamos}}{\ir{vais}}{\ir{van}}
+\conj{estar}{在；处于}{\ir{estoy}}{\ir{estás}}{\ir{está}}{estamos}{estáis}{\ir{están}}
+\conj{decir}{说}{\ir{digo}}{\ir{dices}}{\ir{dice}}{decimos}{decís}{\ir{dicen}}
+\end{conjtable}
+
+\subsection{逐个说明}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=3pt]
+  \item \textbf{ser}（是）：六个形式全部不规则，\textbf{必须背熟}。表示身份、国籍、职业：\es{Soy profesor/profesora.}\ \es{Soy de París.}\ \es{Eres francesa.}
+  \item \textbf{tener}（有）：\textbf{yo} 形式不规则（\ir{tengo}），同时是 \es{e $\to$ ie} 靴子型（\ir{tienes, tiene, tienen}）；\es{tenemos, tenéis} 规则。\es{Tengo 23 años.}（我 23 岁。西语说“有”多少岁）
+  \item \textbf{ir}（去）：词根完全替换为 \es{v-}，词尾是 \es{-ar} 型的 \es{-a-}：\es{voy, vas, va, vamos, vais, van}。结构 \textbf{ir a + 地点}（去某地）：\es{Voy a la escuela.}；\textbf{ir a + 动词原形}（去做／将要做）：\es{Voy a la escuela a estudiar español.}（我去学校学西班牙语。）
+  \item \textbf{estar}（在）：yo 形式 \ir{estoy}，tú / él / ellos 带重音符 \ir{estás, está, están}；\es{nosotros, vosotros} 规则。\es{¿Cómo estás?}（你好吗？）
+  \item \textbf{decir}（说）：yo 形式 \ir{digo}，其余是 \es{e $\to$ i} 靴子型；\es{nosotros, vosotros} 规则。
+\end{itemize}
+
+\section{总览与速记}
+
+\subsection{按类型归纳}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}>{\bfseries}p{2.6cm}p{3.7cm}p{9.8cm}@{}}
+\toprule
+类型 & 动词 & 如何变 \\
+\midrule
+规则 \es{-ar} & estudiar, cantar, cocinar, hablar, trabajar, llamar, significar & 词根 + \es{-o, -as, -a, -amos, -áis, -an} \\
+规则 \es{-er} & leer & 词根 + \es{-o, -es, -e, -emos, -éis, -en} \\
+规则 \es{-ir} & escribir, vivir & 词根 + \es{-o, -es, -e, -imos, -ís, -en} \\
+自反动词 & llamarse, levantarse, bañarse, dedicarse & \textbf{自反代词 me/te/se/nos/os/se} + 规则 \es{-ar} 变位 \\
+\es{o $\to$ ue} & poder & 靴子型：\es{puedo, puedes, puede, podemos, podéis, pueden} \\
+\es{e $\to$ ie} & sentir（、tener） & 靴子型：\es{siento, sientes, siente, sentimos, sentís, sienten} \\
+\es{e $\to$ i} & repetir（、decir） & 靴子型：\es{repito, repites, repite, repetimos, repetís, repiten} \\
+yo 形式不规则 & tener, decir, estar, ir, ser & \es{tengo, digo, estoy, voy, soy}（\ir{yo 形式需单独记}） \\
+完全不规则 & ser, ir & 见上表整体记忆 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{五个易错点}
+
+\begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
+  \item \textbf{重音符号}：\es{estudiáis, cocináis, leéis, tenéis, escribís, vivís, sois} 等 vosotros 形式要带重音（\es{sois}、\es{vais} 为单音节词，不标重音）。
+  \item \textbf{靴子型的“脚”不变}：\es{nosotros / vosotros} 保持原元音，例如 \es{podemos}（不是 \es{puedemos}），\es{tenemos}（不是 \es{tienemos}）。
+  \item \textbf{-er 与 -ir 只差两格}：\es{leemos / escribimos}，\es{leéis / escribís}。
+  \item \textbf{自反代词不能漏}：\es{Me llamo\ldots}，不能说 \es{*Llamo\ldots}（“我叫”）；\es{Me levanto temprano.}
+  \item \textbf{usted/ustedes 用第三人称}：\es{Usted tiene}，\es{ustedes viven}；\es{¿Cómo se llama usted?}
+\end{enumerate}
+
+\begin{tip}
+\textbf{背诵口诀：}
+\begin{itemize}[leftmargin=1.3em,itemsep=1pt,topsep=2pt]
+  \item \es{-ar}：o, as, a, amos, áis, an \hfill \es{-er}：o, es, e, emos, éis, en \hfill \es{-ir}：o, es, e, imos, ís, en
+  \item 先判断动词类型：自反？靴子型？yo 不规则？再套用对应的词尾。
+\end{itemize}
+\end{tip}
+
+\end{document}
