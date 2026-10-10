@@ -1,0 +1,6 @@
+# Lessons learned (keep short; add new ones when a failure gets resolved)
+
+- Local paths from the user's own computer (e.g. `/Users/...`, WeChat temp folders) are not readable in the cloud container. Ask the user to upload the file; uploads land in `/root/.claude/uploads/`.
+- Wikimedia (Commons/Wikipedia) returns HTTP 429 from this container's shared IP. What worked: send a descriptive `User-Agent`, fetch one file at a time with 10-25 s gaps, use `https://commons.wikimedia.org/wiki/Special:FilePath/<File name>?width=<px>` for a sized copy, and run large downloads in the background. Find file names via WebSearch or the file links in a Wikipedia page's HTML rather than the Commons search API.
+- PPTX from a template: duplicate slides with the pptx skill's `add_slide.py`, reorder `<p:sldIdLst>`, run `clean.py`, then fill text with python-pptx by reusing existing paragraphs (keeps template formatting). Switching all fonts means editing theme `latin`/`cs` plus every explicit `typeface` in masters/layouts; leave the `Wingdings 2` bullet glyph font.
+- Check the layout's free space before adding pictures: shrink or remove a text placeholder and keep captions clear of the template's dotted footer line.
